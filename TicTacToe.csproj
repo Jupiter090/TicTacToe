@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="choose_gamemode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="choose_gamemode.Designer.cs">
+      <DependentUpon>choose_gamemode.cs</DependentUpon>
+    </Compile>
     <Compile Include="Game.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="resources\customButtons.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="choose_gamemode.resx">
+      <DependentUpon>choose_gamemode.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Game.resx">
       <DependentUpon>Game.cs</DependentUpon>
     </EmbeddedResource>

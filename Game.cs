@@ -59,7 +59,7 @@ namespace TicTacToe
 
         private void customButtons3_Click(object sender, EventArgs e)
         {
-            MainMenu.closedFromButton = true;
+            choose_gamemode.closedFromButton = true;
             this.Close();
         }
 
@@ -230,7 +230,7 @@ namespace TicTacToe
 
         private void PlayAgain_Click(object sender, EventArgs e)
         {
-            MainMenu.playAgain = true;
+            choose_gamemode.playAgain = true;
             this.Close();
         }
         private bool CheckOnWin(string player)

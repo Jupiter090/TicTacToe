@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,8 +16,7 @@ namespace TicTacToe
 {
     public partial class MainMenu : Form
     {
-        static public bool closedFromButton = false;
-        static public bool playAgain = false;
+        
         public MainMenu()
         {
             InitializeComponent();
@@ -37,29 +37,21 @@ namespace TicTacToe
             Play.Top = (int)(this.Size.Height / 3.5f);
             Exit.Left = (int)(this.Size.Width / 2.325);
             Exit.Top = (int)(this.Size.Height / 2.75f);
+
         }
 
         private void Play_Click(object sender, EventArgs e)
         {
-            Game game = new Game();
-            game.FormClosed += new FormClosedEventHandler(Game_FormClosed);
-            game.Show();
+            choose_gamemode gamemode = new choose_gamemode();
+            gamemode.FormClosed += new FormClosedEventHandler(Game_FormClosed);
+            gamemode.Show();
             this.Hide();
         }
         void Game_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if(playAgain == true)
+            if(e.CloseReason == CloseReason.UserClosing)
             {
                 this.Show();
-                Play.PerformClick();
-                this.Hide();
-                playAgain = false;
-                return;
-            }
-            else if(closedFromButton == true)
-            {
-                this.Show();
-                closedFromButton = false;
             }
         }
     }
