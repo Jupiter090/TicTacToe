@@ -29,6 +29,7 @@ namespace TicTacToe
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.GameName = new System.Windows.Forms.Label();
             this.Exit = new TicTacToe.resources.customButtons();
             this.Play = new TicTacToe.resources.customButtons();
@@ -96,9 +97,10 @@ namespace TicTacToe
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.Play);
             this.Controls.Add(this.GameName);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainMenu";
-            this.Text = "Form1";
+            this.Text = "Main menu";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

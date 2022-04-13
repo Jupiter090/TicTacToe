@@ -29,6 +29,7 @@ namespace TicTacToe
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.GameOver = new System.Windows.Forms.Label();
             this.wins = new System.Windows.Forms.Label();
             this.PlayAgain = new TicTacToe.resources.customButtons();
@@ -63,6 +64,7 @@ namespace TicTacToe
             this.wins.Size = new System.Drawing.Size(301, 243);
             this.wins.TabIndex = 15;
             this.wins.Text = "Wins: \r\nPlayer - 0\r\nRobot - 0";
+            // 
             // PlayAgain
             // 
             this.PlayAgain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -311,6 +313,7 @@ namespace TicTacToe
             this.Controls.Add(this.place2);
             this.Controls.Add(this.place1);
             this.Controls.Add(this.customButtons3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Game";
             this.Text = "Game";
             this.Load += new System.EventHandler(this.Game_Load);
