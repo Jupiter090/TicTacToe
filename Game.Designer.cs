@@ -63,7 +63,6 @@ namespace TicTacToe
             this.wins.Size = new System.Drawing.Size(301, 243);
             this.wins.TabIndex = 15;
             this.wins.Text = "Wins: \r\nPlayer - 0\r\nRobot - 0";
-            // 
             // PlayAgain
             // 
             this.PlayAgain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
