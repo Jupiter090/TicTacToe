@@ -13,6 +13,7 @@ namespace TicTacToe
     public partial class Game : Form
     {
         private int count;
+        private bool canRun = true;
 
         public Game()
         {
@@ -52,6 +53,7 @@ namespace TicTacToe
             PlayAgain.Visible = false;
             PlayAgain.Top = (int)(this.Size.Height / 7f);
             PlayAgain.Left = (int)(this.Size.Width / 2.18f);
+            wins.Text = "Wins:\nPlayer: " + Program.wins_p + "\nRobot: " + Program.wins_r;
 
         }
 
@@ -63,17 +65,26 @@ namespace TicTacToe
 
         async private void onGridClick(object sender, EventArgs e)
         {
-            //Plays robots AI when player click
-            if((sender as Button).Text == "")
+            if (canRun)
             {
-                (sender as Button).Text = "X";
-                await Task.Delay(250);
-                computerAI();
+                //Plays robots AI when player click
+                if ((sender as Button).Text == "")
+                {
+                    (sender as Button).Text = "X";
+                    await Task.Delay(250);
+                    computerAI();
+                }
             }
         }
         private void computerAI()
         {
             count++;
+            if (CheckOnWin("X") && canRun){
+                canRun = false;
+                Program.wins_p++;
+                wins.Text = "Wins:\nPlayer: " + Program.wins_p + "\nRobot: " + Program.wins_r;
+                return;
+            }
             if (CheckOnFullGrid())
             {
                 return;
@@ -146,8 +157,16 @@ namespace TicTacToe
                         return;
                     }
                     break;
+
             }
-            if (count == 30)
+            if (CheckOnLoose("O") && canRun)
+            {
+                Program.wins_r++;
+                canRun = false;
+                wins.Text = "Wins:\nPlayer: " + Program.wins_p + "\nRobot: " + Program.wins_r;
+                return;
+            }
+            if (count == 100)
             {
                 count = 0;
                 if(place1.Text == "")
@@ -185,16 +204,20 @@ namespace TicTacToe
                 {
                     place9.Text = "O";
                 }
+                if (CheckOnLoose("O") && canRun)
+                {
+                    canRun = false;
+                    Program.wins_r++;
+                    wins.Text = "Wins:\nPlayer: " + Program.wins_p + "\nRobot: " + Program.wins_r;
+                    return;
+                }
                 return;
             }
+
             computerAI();
         }
         private bool CheckOnFullGrid()
         {
-            if(CheckOnWin(place1.Text + place2.Text + place3.Text + place4.Text + place5.Text + place6.Text + place7.Text + place8.Text + place9.Text, "X"))
-            {
-                return true;
-            }
             if (place1.Text != "" && place2.Text != "" && place3.Text != "" && place4.Text != "" && place5.Text != "" && place6.Text != "" && place7.Text != "" && place8.Text != "" && place9.Text != "")
             {
                 GameOver.Text = "Tie!";
@@ -210,23 +233,104 @@ namespace TicTacToe
             MainMenu.playAgain = true;
             this.Close();
         }
-
-        private bool CheckOnWin(string grid, string player)
+        private bool CheckOnWin(string player)
         {
-            int succesed = 0;
-
-            for (int i = 1; i > 10; i++)
+            if (place7.Text == player && place8.Text == player && place9.Text == player)
             {
-                string one_button = grid.Substring(grid.Length - i);
-                if(one_button == player)
-                {
-                    Console.WriteLine(one_button);
-                    succesed++;
-                }
+                GameOver.Text = "Win!";
+                PlayAgain.Visible = true;
+                return true;
+            }else if (place4.Text == player && place5.Text == player && place6.Text == player)
+            {
+                GameOver.Text = "Win!";
+                PlayAgain.Visible = true;
+                return true;
             }
-            if(succesed >= 3)
+            else if (place1.Text == player && place2.Text == player && place3.Text == player)
             {
-                GameOver.Text = "You win";
+                GameOver.Text = "Win!";
+                PlayAgain.Visible = true;
+                return true;
+            }
+            else if (place1.Text == player && place4.Text == player && place7.Text == player)
+            {
+                GameOver.Text = "Win!";
+                PlayAgain.Visible = true;
+                return true;
+            }
+            else if (place2.Text == player && place5.Text == player && place8.Text == player)
+            {
+                GameOver.Text = "Win!";
+                PlayAgain.Visible = true;
+                return true;
+            }
+            else if (place3.Text == player && place6.Text == player && place9.Text == player)
+            {
+                GameOver.Text = "Win!";
+                PlayAgain.Visible = true;
+                return true;
+            }
+            else if (place1.Text == player && place5.Text == player && place9.Text == player)
+            {
+                GameOver.Text = "Win!";
+                PlayAgain.Visible = true;
+                return true;
+            }
+            else if (place3.Text == player && place5.Text == player && place7.Text == player)
+            {
+                GameOver.Text = "Win!";
+                PlayAgain.Visible = true;
+                return true;
+            }
+            return false;
+        }
+        private bool CheckOnLoose(string player)
+        {
+            if (place7.Text == player && place8.Text == player && place9.Text == player)
+            {
+                GameOver.Text = "Lost!";
+                PlayAgain.Visible = true;
+                return true;
+            }
+            else if (place4.Text == player && place5.Text == player && place6.Text == player)
+            {
+                GameOver.Text = "Lost!";
+                PlayAgain.Visible = true;
+                return true;
+            }
+            else if (place1.Text == player && place2.Text == player && place3.Text == player)
+            {
+                GameOver.Text = "Lost!";
+                PlayAgain.Visible = true;
+                return true;
+            }
+            else if (place1.Text == player && place4.Text == player && place7.Text == player)
+            {
+                GameOver.Text = "Lost!";
+                PlayAgain.Visible = true;
+                return true;
+            }
+            else if (place2.Text == player && place5.Text == player && place8.Text == player)
+            {
+                GameOver.Text = "Lost!";
+                PlayAgain.Visible = true;
+                return true;
+            }
+            else if (place3.Text == player && place6.Text == player && place9.Text == player)
+            {
+                GameOver.Text = "Lost!";
+                PlayAgain.Visible = true;
+                return true;
+            }
+            else if (place1.Text == player && place5.Text == player && place9.Text == player)
+            {
+                GameOver.Text = "Lost!";
+                PlayAgain.Visible = true;
+                return true;
+            }
+            else if (place3.Text == player && place5.Text == player && place7.Text == player)
+            {
+                GameOver.Text = "Lost!";
                 PlayAgain.Visible = true;
                 return true;
             }
