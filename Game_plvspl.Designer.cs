@@ -1,7 +1,7 @@
 ﻿
 namespace TicTacToe
 {
-    partial class Game
+    partial class Game_plvspl
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,8 @@ namespace TicTacToe
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
-            this.GameOver = new System.Windows.Forms.Label();
-            this.wins = new System.Windows.Forms.Label();
-            this.PlayAgain = new TicTacToe.resources.customButtons();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game_plvspl));
+            this.customButtons3 = new TicTacToe.resources.customButtons();
             this.place9 = new TicTacToe.resources.customButtons();
             this.place8 = new TicTacToe.resources.customButtons();
             this.place7 = new TicTacToe.resources.customButtons();
@@ -42,48 +40,30 @@ namespace TicTacToe
             this.place3 = new TicTacToe.resources.customButtons();
             this.place2 = new TicTacToe.resources.customButtons();
             this.place1 = new TicTacToe.resources.customButtons();
-            this.customButtons3 = new TicTacToe.resources.customButtons();
+            this.GameOver = new System.Windows.Forms.Label();
+            this.wins = new System.Windows.Forms.Label();
+            this.PlayAgain = new TicTacToe.resources.customButtons();
             this.SuspendLayout();
             // 
-            // GameOver
+            // customButtons3
             // 
-            this.GameOver.AutoSize = true;
-            this.GameOver.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.GameOver.Location = new System.Drawing.Point(600, 154);
-            this.GameOver.Name = "GameOver";
-            this.GameOver.Size = new System.Drawing.Size(139, 81);
-            this.GameOver.TabIndex = 13;
-            this.GameOver.Text = "Tie!";
-            // 
-            // wins
-            // 
-            this.wins.AutoSize = true;
-            this.wins.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.wins.Location = new System.Drawing.Point(12, 6);
-            this.wins.Name = "wins";
-            this.wins.Size = new System.Drawing.Size(301, 243);
-            this.wins.TabIndex = 15;
-            this.wins.Text = "Wins: \r\nPlayer - 0\r\nRobot - 0";
-            // 
-            // PlayAgain
-            // 
-            this.PlayAgain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.PlayAgain.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.PlayAgain.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.PlayAgain.BorderRadius = 25;
-            this.PlayAgain.BorderSize = 0;
-            this.PlayAgain.FlatAppearance.BorderSize = 0;
-            this.PlayAgain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PlayAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PlayAgain.ForeColor = System.Drawing.Color.White;
-            this.PlayAgain.Location = new System.Drawing.Point(558, 383);
-            this.PlayAgain.Name = "PlayAgain";
-            this.PlayAgain.Size = new System.Drawing.Size(230, 64);
-            this.PlayAgain.TabIndex = 14;
-            this.PlayAgain.Text = "Play again";
-            this.PlayAgain.TextdColor = System.Drawing.Color.White;
-            this.PlayAgain.UseVisualStyleBackColor = false;
-            this.PlayAgain.Click += new System.EventHandler(this.PlayAgain_Click);
+            this.customButtons3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customButtons3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customButtons3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customButtons3.BorderRadius = 25;
+            this.customButtons3.BorderSize = 0;
+            this.customButtons3.FlatAppearance.BorderSize = 0;
+            this.customButtons3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButtons3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.customButtons3.ForeColor = System.Drawing.Color.White;
+            this.customButtons3.Location = new System.Drawing.Point(285, 193);
+            this.customButtons3.Name = "customButtons3";
+            this.customButtons3.Size = new System.Drawing.Size(230, 64);
+            this.customButtons3.TabIndex = 4;
+            this.customButtons3.Text = "Go back!";
+            this.customButtons3.TextdColor = System.Drawing.Color.White;
+            this.customButtons3.UseVisualStyleBackColor = false;
+            this.customButtons3.Click += new System.EventHandler(this.customButtons3_Click);
             // 
             // place9
             // 
@@ -97,10 +77,10 @@ namespace TicTacToe
             this.place9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place9.Font = new System.Drawing.Font("Microsoft YaHei", 48F, System.Drawing.FontStyle.Bold);
             this.place9.ForeColor = System.Drawing.Color.Black;
-            this.place9.Location = new System.Drawing.Point(422, 23);
+            this.place9.Location = new System.Drawing.Point(469, 32);
             this.place9.Name = "place9";
             this.place9.Size = new System.Drawing.Size(125, 125);
-            this.place9.TabIndex = 12;
+            this.place9.TabIndex = 21;
             this.place9.TabStop = false;
             this.place9.TextdColor = System.Drawing.Color.Black;
             this.place9.UseVisualStyleBackColor = false;
@@ -118,10 +98,10 @@ namespace TicTacToe
             this.place8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place8.Font = new System.Drawing.Font("Microsoft YaHei", 48F, System.Drawing.FontStyle.Bold);
             this.place8.ForeColor = System.Drawing.Color.Black;
-            this.place8.Location = new System.Drawing.Point(291, 23);
+            this.place8.Location = new System.Drawing.Point(338, 32);
             this.place8.Name = "place8";
             this.place8.Size = new System.Drawing.Size(125, 125);
-            this.place8.TabIndex = 11;
+            this.place8.TabIndex = 20;
             this.place8.TabStop = false;
             this.place8.TextdColor = System.Drawing.Color.Black;
             this.place8.UseVisualStyleBackColor = false;
@@ -139,10 +119,10 @@ namespace TicTacToe
             this.place7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place7.Font = new System.Drawing.Font("Microsoft YaHei", 48F, System.Drawing.FontStyle.Bold);
             this.place7.ForeColor = System.Drawing.Color.Black;
-            this.place7.Location = new System.Drawing.Point(160, 23);
+            this.place7.Location = new System.Drawing.Point(207, 32);
             this.place7.Name = "place7";
             this.place7.Size = new System.Drawing.Size(125, 125);
-            this.place7.TabIndex = 10;
+            this.place7.TabIndex = 19;
             this.place7.TabStop = false;
             this.place7.TextdColor = System.Drawing.Color.Black;
             this.place7.UseVisualStyleBackColor = false;
@@ -160,10 +140,10 @@ namespace TicTacToe
             this.place6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place6.Font = new System.Drawing.Font("Microsoft YaHei", 48F, System.Drawing.FontStyle.Bold);
             this.place6.ForeColor = System.Drawing.Color.Black;
-            this.place6.Location = new System.Drawing.Point(422, 154);
+            this.place6.Location = new System.Drawing.Point(469, 163);
             this.place6.Name = "place6";
             this.place6.Size = new System.Drawing.Size(125, 125);
-            this.place6.TabIndex = 9;
+            this.place6.TabIndex = 18;
             this.place6.TabStop = false;
             this.place6.TextdColor = System.Drawing.Color.Black;
             this.place6.UseVisualStyleBackColor = false;
@@ -181,10 +161,10 @@ namespace TicTacToe
             this.place5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place5.Font = new System.Drawing.Font("Microsoft YaHei", 48F, System.Drawing.FontStyle.Bold);
             this.place5.ForeColor = System.Drawing.Color.Black;
-            this.place5.Location = new System.Drawing.Point(291, 154);
+            this.place5.Location = new System.Drawing.Point(338, 163);
             this.place5.Name = "place5";
             this.place5.Size = new System.Drawing.Size(125, 125);
-            this.place5.TabIndex = 8;
+            this.place5.TabIndex = 17;
             this.place5.TabStop = false;
             this.place5.TextdColor = System.Drawing.Color.Black;
             this.place5.UseVisualStyleBackColor = false;
@@ -202,10 +182,10 @@ namespace TicTacToe
             this.place4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place4.Font = new System.Drawing.Font("Microsoft YaHei", 48F, System.Drawing.FontStyle.Bold);
             this.place4.ForeColor = System.Drawing.Color.Black;
-            this.place4.Location = new System.Drawing.Point(160, 154);
+            this.place4.Location = new System.Drawing.Point(207, 163);
             this.place4.Name = "place4";
             this.place4.Size = new System.Drawing.Size(125, 125);
-            this.place4.TabIndex = 7;
+            this.place4.TabIndex = 16;
             this.place4.TabStop = false;
             this.place4.TextdColor = System.Drawing.Color.Black;
             this.place4.UseVisualStyleBackColor = false;
@@ -223,10 +203,10 @@ namespace TicTacToe
             this.place3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place3.Font = new System.Drawing.Font("Microsoft YaHei", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.place3.ForeColor = System.Drawing.Color.Black;
-            this.place3.Location = new System.Drawing.Point(422, 285);
+            this.place3.Location = new System.Drawing.Point(469, 294);
             this.place3.Name = "place3";
             this.place3.Size = new System.Drawing.Size(125, 125);
-            this.place3.TabIndex = 6;
+            this.place3.TabIndex = 15;
             this.place3.TabStop = false;
             this.place3.TextdColor = System.Drawing.Color.Black;
             this.place3.UseVisualStyleBackColor = false;
@@ -244,10 +224,10 @@ namespace TicTacToe
             this.place2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place2.Font = new System.Drawing.Font("Microsoft YaHei", 48F, System.Drawing.FontStyle.Bold);
             this.place2.ForeColor = System.Drawing.Color.Black;
-            this.place2.Location = new System.Drawing.Point(291, 285);
+            this.place2.Location = new System.Drawing.Point(338, 294);
             this.place2.Name = "place2";
             this.place2.Size = new System.Drawing.Size(125, 125);
-            this.place2.TabIndex = 5;
+            this.place2.TabIndex = 14;
             this.place2.TabStop = false;
             this.place2.TextdColor = System.Drawing.Color.Black;
             this.place2.UseVisualStyleBackColor = false;
@@ -265,43 +245,62 @@ namespace TicTacToe
             this.place1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place1.Font = new System.Drawing.Font("Microsoft YaHei", 48F, System.Drawing.FontStyle.Bold);
             this.place1.ForeColor = System.Drawing.Color.Black;
-            this.place1.Location = new System.Drawing.Point(160, 285);
+            this.place1.Location = new System.Drawing.Point(207, 294);
             this.place1.Name = "place1";
             this.place1.Size = new System.Drawing.Size(125, 125);
-            this.place1.TabIndex = 4;
+            this.place1.TabIndex = 13;
             this.place1.TabStop = false;
             this.place1.TextdColor = System.Drawing.Color.Black;
             this.place1.UseVisualStyleBackColor = false;
             this.place1.Click += new System.EventHandler(this.onGridClick);
             // 
-            // customButtons3
+            // GameOver
             // 
-            this.customButtons3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customButtons3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customButtons3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customButtons3.BorderRadius = 25;
-            this.customButtons3.BorderSize = 0;
-            this.customButtons3.FlatAppearance.BorderSize = 0;
-            this.customButtons3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButtons3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.customButtons3.ForeColor = System.Drawing.Color.White;
-            this.customButtons3.Location = new System.Drawing.Point(291, 185);
-            this.customButtons3.Name = "customButtons3";
-            this.customButtons3.Size = new System.Drawing.Size(230, 64);
-            this.customButtons3.TabIndex = 3;
-            this.customButtons3.Text = "Go back!";
-            this.customButtons3.TextdColor = System.Drawing.Color.White;
-            this.customButtons3.UseVisualStyleBackColor = false;
-            this.customButtons3.Click += new System.EventHandler(this.customButtons3_Click);
+            this.GameOver.AutoSize = true;
+            this.GameOver.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.GameOver.Location = new System.Drawing.Point(485, 178);
+            this.GameOver.Name = "GameOver";
+            this.GameOver.Size = new System.Drawing.Size(139, 81);
+            this.GameOver.TabIndex = 23;
+            this.GameOver.Text = "Tie!";
             // 
-            // Game
+            // wins
+            // 
+            this.wins.AutoSize = true;
+            this.wins.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.wins.Location = new System.Drawing.Point(12, 9);
+            this.wins.Name = "wins";
+            this.wins.Size = new System.Drawing.Size(301, 243);
+            this.wins.TabIndex = 24;
+            this.wins.Text = "Wins: \r\nPlayer - 0\r\nRobot - 0";
+            // 
+            // PlayAgain
+            // 
+            this.PlayAgain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.PlayAgain.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.PlayAgain.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.PlayAgain.BorderRadius = 25;
+            this.PlayAgain.BorderSize = 0;
+            this.PlayAgain.FlatAppearance.BorderSize = 0;
+            this.PlayAgain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlayAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.PlayAgain.ForeColor = System.Drawing.Color.White;
+            this.PlayAgain.Location = new System.Drawing.Point(293, 201);
+            this.PlayAgain.Name = "PlayAgain";
+            this.PlayAgain.Size = new System.Drawing.Size(230, 64);
+            this.PlayAgain.TabIndex = 25;
+            this.PlayAgain.Text = "Play again";
+            this.PlayAgain.TextdColor = System.Drawing.Color.White;
+            this.PlayAgain.UseVisualStyleBackColor = false;
+            // 
+            // Game_plvspl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 459);
-            this.Controls.Add(this.wins);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.PlayAgain);
+            this.Controls.Add(this.wins);
             this.Controls.Add(this.GameOver);
             this.Controls.Add(this.place9);
             this.Controls.Add(this.place8);
@@ -314,9 +313,9 @@ namespace TicTacToe
             this.Controls.Add(this.place1);
             this.Controls.Add(this.customButtons3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Game";
-            this.Text = "Game";
-            this.Load += new System.EventHandler(this.Game_Load);
+            this.Name = "Game_plvspl";
+            this.Text = "Player1 vs Player2";
+            this.Load += new System.EventHandler(this.Game_plvspl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,15 +324,15 @@ namespace TicTacToe
         #endregion
 
         private resources.customButtons customButtons3;
-        private resources.customButtons place1;
-        private resources.customButtons place2;
-        private resources.customButtons place3;
-        private resources.customButtons place4;
-        private resources.customButtons place5;
-        private resources.customButtons place6;
-        private resources.customButtons place7;
-        private resources.customButtons place8;
         private resources.customButtons place9;
+        private resources.customButtons place8;
+        private resources.customButtons place7;
+        private resources.customButtons place6;
+        private resources.customButtons place5;
+        private resources.customButtons place4;
+        private resources.customButtons place3;
+        private resources.customButtons place2;
+        private resources.customButtons place1;
         private System.Windows.Forms.Label GameOver;
         private System.Windows.Forms.Label wins;
         private resources.customButtons PlayAgain;

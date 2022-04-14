@@ -46,6 +46,14 @@ namespace TicTacToe
             game.FormClosed += new FormClosedEventHandler(Game_FormClosed);
             this.Hide();
         }
+        private void PlvsPl_Click(object sender, EventArgs e)
+        {
+            Form game = new Game_plvspl();
+            game.Show();
+            game.FormClosed += new FormClosedEventHandler(Game_FormClosed);
+            this.Hide();
+
+        }
         void Game_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (playAgain == true)

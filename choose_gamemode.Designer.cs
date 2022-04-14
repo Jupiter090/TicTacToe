@@ -74,6 +74,7 @@ namespace TicTacToe
             this.PlvsPl.Text = "Player vs Player";
             this.PlvsPl.TextdColor = System.Drawing.Color.White;
             this.PlvsPl.UseVisualStyleBackColor = false;
+            this.PlvsPl.Click += new System.EventHandler(this.PlvsPl_Click);
             // 
             // GoBack
             // 
