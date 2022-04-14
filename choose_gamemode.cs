@@ -14,6 +14,7 @@ namespace TicTacToe
     {
         static public bool closedFromButton = false;
         static public bool playAgain = false;
+        static public bool playAgainPl = false;
         public choose_gamemode()
         {
             InitializeComponent();
@@ -62,6 +63,13 @@ namespace TicTacToe
                 PlvsB.PerformClick();
                 this.Hide();
                 playAgain = false;
+                return;
+            }else if (playAgainPl == true)
+            {
+                this.Show();
+                PlvsPl.PerformClick();
+                this.Hide();
+                playAgainPl = false;
                 return;
             }
             else if (closedFromButton == true)

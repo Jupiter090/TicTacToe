@@ -12,6 +12,7 @@ namespace TicTacToe
         public static int wins_p = 0;
         public static int wins_p1 = 0;
         public static int wins_p2 = 0;
+        public static int round = 0;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

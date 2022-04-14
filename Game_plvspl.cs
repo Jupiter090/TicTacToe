@@ -13,7 +13,6 @@ namespace TicTacToe
     public partial class Game_plvspl : Form
     {
         //Determines wich player is playing
-        static int round = 0;
 
         public Game_plvspl()
         {
@@ -49,10 +48,13 @@ namespace TicTacToe
             GameOver.Text = null;
             GameOver.Top = (int)(this.Size.Height / 17f);
             GameOver.Left = (int)(this.Size.Width / 2.075f);
+            GameOverWin.Text = null;
+            GameOverWin.Top = (int)(this.Size.Height / 17f);
+            GameOverWin.Left = (int)(this.Size.Width / 2.40f);
             PlayAgain.Visible = false;
             PlayAgain.Top = (int)(this.Size.Height / 7f);
             PlayAgain.Left = (int)(this.Size.Width / 2.18f);
-            wins.Text = "Wins:\nPlayer1: " + Program.wins_p1 + "\nPlayer2: " + Program.wins_p2;
+            wins.Text = "Wins:\nPlayer1[X]: " + Program.wins_p1 + "\nPlayer2[O]: " + Program.wins_p2;
         }
 
         private void customButtons3_Click(object sender, EventArgs e)
@@ -64,17 +66,149 @@ namespace TicTacToe
         {
             if((sender as Button).Text == "")
             {
-                if(round == 0)
+                if(Program.round == 0)
                 {
                     (sender as Button).Text = "X";
-                    round = 1;
+                    Program.round = 1;
                 }
-                else if (round == 1)
+                else if (Program.round == 1)
                 {
                     (sender as Button).Text = "O";
-                    round = 0;
+                    Program.round = 0;
+                }
+                if (CheckOnPlayerWin("X"))
+                {
+                    Program.wins_p1++;
+                    wins.Text = "Wins:\nPlayer1[X]: " + Program.wins_p1 + "\nPlayer2[O]: " + Program.wins_p2;
+                }
+                else if (CheckOnPlayerWin("O"))
+                {
+                    Program.wins_p2++;
+                    wins.Text = "Wins:\nPlayer1[X]: " + Program.wins_p1 + "\nPlayer2[O]: " + Program.wins_p2;
+                }else if (checkOnFullGrid()){}
+            }
+        }
+        private bool CheckOnPlayerWin(string player)
+        {
+            if(player == "X")
+            {
+                if(place7.Text == player && place8.Text == player && place9.Text == player)
+                {
+                    GameOverWin.Text = "Player1 Won!";
+                    PlayAgain.Visible = true;
+                    return true;
+                }else if (place6.Text == player && place5.Text == player && place4.Text == player)
+                {
+                    GameOverWin.Text = "Player1 Won!";
+                    PlayAgain.Visible = true;
+                    return true;
+                }
+                else if (place3.Text == player && place2.Text == player && place1.Text == player)
+                {
+                    GameOverWin.Text = "Player1 Won!";
+                    PlayAgain.Visible = true;
+                    return true;
+                }
+                else if (place7.Text == player && place4.Text == player && place1.Text == player)
+                {
+                    GameOverWin.Text = "Player1 Won!";
+                    PlayAgain.Visible = true;
+                    return true;
+                }
+                else if (place8.Text == player && place5.Text == player && place2.Text == player)
+                {
+                    GameOverWin.Text = "Player1 Won!";
+                    PlayAgain.Visible = true;
+                    return true;
+                }
+                else if (place9.Text == player && place6.Text == player && place3.Text == player)
+                {
+                    GameOverWin.Text = "Player1 Won!";
+                    PlayAgain.Visible = true;
+                    return true;
+                }
+                else if (place1.Text == player && place5.Text == player && place9.Text == player)
+                {
+                    GameOverWin.Text = "Player1 Won!";
+                    PlayAgain.Visible = true;
+                    return true;
+                }
+                else if (place7.Text == player && place5.Text == player && place3.Text == player)
+                {
+                    GameOverWin.Text = "Player1 Won!";
+                    PlayAgain.Visible = true;
+                    return true;
                 }
             }
+            if (player == "O")
+            {
+                if (place7.Text == player && place8.Text == player && place9.Text == player)
+                {
+                    GameOverWin.Text = "Player2 Won!";
+                    PlayAgain.Visible = true;
+                    return true;
+                }
+                else if (place6.Text == player && place5.Text == player && place4.Text == player)
+                {
+                    GameOverWin.Text = "Player2 Won!";
+                    PlayAgain.Visible = true;
+                    return true;
+                }
+                else if (place3.Text == player && place2.Text == player && place1.Text == player)
+                {
+                    GameOverWin.Text = "Player2 Won!";
+                    PlayAgain.Visible = true;
+                    return true;
+                }
+                else if (place7.Text == player && place4.Text == player && place1.Text == player)
+                {
+                    GameOverWin.Text = "Player2 Won!";
+                    PlayAgain.Visible = true;
+                    return true;
+                }
+                else if (place8.Text == player && place5.Text == player && place2.Text == player)
+                {
+                    GameOverWin.Text = "Player2 Won!";
+                    PlayAgain.Visible = true;
+                    return true;
+                }
+                else if (place9.Text == player && place6.Text == player && place3.Text == player)
+                {
+                    GameOverWin.Text = "Player2 Won!";
+                    PlayAgain.Visible = true;
+                    return true;
+                }
+                else if (place1.Text == player && place5.Text == player && place9.Text == player)
+                {
+                    GameOverWin.Text = "Player2 Won!";
+                    PlayAgain.Visible = true;
+                    return true;
+                }
+                else if (place7.Text == player && place5.Text == player && place3.Text == player)
+                {
+                    GameOverWin.Text = "Player2 Won!";
+                    PlayAgain.Visible = true;
+                    return true;
+                }
+            }
+            return false;
+        }
+        private bool checkOnFullGrid()
+        {
+            if (place1.Text != "" && place2.Text != "" && place3.Text != "" && place4.Text != "" && place5.Text != "" && place6.Text != "" && place7.Text != "" && place8.Text != "" && place9.Text != "")
+            {
+                GameOver.Text = "Tie!";
+                PlayAgain.Visible = true;
+                return true;
+            }
+
+            return false;
+        }
+
+        private void PlayAgain_Click(object sender, EventArgs e)
+        {
+            choose_gamemode.playAgainPl = true;
+            this.Close();
         }
     }
 }

@@ -43,6 +43,7 @@ namespace TicTacToe
             this.GameOver = new System.Windows.Forms.Label();
             this.wins = new System.Windows.Forms.Label();
             this.PlayAgain = new TicTacToe.resources.customButtons();
+            this.GameOverWin = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // customButtons3
@@ -258,11 +259,12 @@ namespace TicTacToe
             // 
             this.GameOver.AutoSize = true;
             this.GameOver.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.GameOver.Location = new System.Drawing.Point(485, 178);
+            this.GameOver.Location = new System.Drawing.Point(521, 220);
             this.GameOver.Name = "GameOver";
             this.GameOver.Size = new System.Drawing.Size(139, 81);
             this.GameOver.TabIndex = 23;
             this.GameOver.Text = "Tie!";
+            this.GameOver.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // wins
             // 
@@ -292,6 +294,17 @@ namespace TicTacToe
             this.PlayAgain.Text = "Play again";
             this.PlayAgain.TextdColor = System.Drawing.Color.White;
             this.PlayAgain.UseVisualStyleBackColor = false;
+            this.PlayAgain.Click += new System.EventHandler(this.PlayAgain_Click);
+            // 
+            // GameOverWin
+            // 
+            this.GameOverWin.AutoSize = true;
+            this.GameOverWin.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.GameOverWin.Location = new System.Drawing.Point(383, 109);
+            this.GameOverWin.Name = "GameOverWin";
+            this.GameOverWin.Size = new System.Drawing.Size(393, 81);
+            this.GameOverWin.TabIndex = 26;
+            this.GameOverWin.Text = "Player1 Win!";
             // 
             // Game_plvspl
             // 
@@ -299,6 +312,7 @@ namespace TicTacToe
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.GameOverWin);
             this.Controls.Add(this.PlayAgain);
             this.Controls.Add(this.wins);
             this.Controls.Add(this.GameOver);
@@ -336,5 +350,6 @@ namespace TicTacToe
         private System.Windows.Forms.Label GameOver;
         private System.Windows.Forms.Label wins;
         private resources.customButtons PlayAgain;
+        private System.Windows.Forms.Label GameOverWin;
     }
 }
