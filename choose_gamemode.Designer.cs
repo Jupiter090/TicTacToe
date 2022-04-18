@@ -34,6 +34,7 @@ namespace TicTacToe
             this.PlvsPl = new TicTacToe.resources.customButtons();
             this.GoBack = new TicTacToe.resources.customButtons();
             this.Gamemode = new System.Windows.Forms.Label();
+            this.LAN = new TicTacToe.resources.customButtons();
             this.SuspendLayout();
             // 
             // PlvsB
@@ -87,7 +88,7 @@ namespace TicTacToe
             this.GoBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GoBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.GoBack.ForeColor = System.Drawing.Color.White;
-            this.GoBack.Location = new System.Drawing.Point(274, 267);
+            this.GoBack.Location = new System.Drawing.Point(274, 336);
             this.GoBack.Name = "GoBack";
             this.GoBack.Size = new System.Drawing.Size(242, 58);
             this.GoBack.TabIndex = 5;
@@ -108,12 +109,33 @@ namespace TicTacToe
             this.Gamemode.Text = "Choose gamemode";
             this.Gamemode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // LAN
+            // 
+            this.LAN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.LAN.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.LAN.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.LAN.BorderRadius = 15;
+            this.LAN.BorderSize = 0;
+            this.LAN.FlatAppearance.BorderSize = 0;
+            this.LAN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LAN.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.LAN.ForeColor = System.Drawing.Color.White;
+            this.LAN.Location = new System.Drawing.Point(274, 267);
+            this.LAN.Name = "LAN";
+            this.LAN.Size = new System.Drawing.Size(242, 58);
+            this.LAN.TabIndex = 7;
+            this.LAN.Text = "LAN";
+            this.LAN.TextdColor = System.Drawing.Color.White;
+            this.LAN.UseVisualStyleBackColor = false;
+            this.LAN.Click += new System.EventHandler(this.LAN_Click);
+            // 
             // choose_gamemode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.LAN);
             this.Controls.Add(this.Gamemode);
             this.Controls.Add(this.GoBack);
             this.Controls.Add(this.PlvsPl);
@@ -133,5 +155,6 @@ namespace TicTacToe
         private resources.customButtons PlvsPl;
         private resources.customButtons GoBack;
         private System.Windows.Forms.Label Gamemode;
+        private resources.customButtons LAN;
     }
 }

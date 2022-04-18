@@ -29,8 +29,10 @@ namespace TicTacToe
             PlvsPl.Top = (int)(this.Size.Height / 3.5f);
             PlvsB.Left = (int)(this.Size.Width / 2.325);
             PlvsB.Top = (int)(this.Size.Height / 2.75f);
+            LAN.Left = (int)(this.Size.Width / 2.325);
+            LAN.Top = (int)(this.Size.Height / 2.25);
             GoBack.Left = (int)(this.Size.Width / 2.325);
-            GoBack.Top = (int)(this.Size.Height / 2.25);
+            GoBack.Top = (int)(this.Size.Height / 1.9);
             Gamemode.Left = (int)(this.Size.Width / 2.95F);
             Gamemode.Top = (int)(this.Size.Height / 5F);
         }
@@ -40,6 +42,7 @@ namespace TicTacToe
             this.Close();
         }
 
+        //Open a new game depending on gamemode and add close event
         private void PlvsB_Click(object sender, EventArgs e)
         {
             Form game = new Game();
@@ -55,6 +58,15 @@ namespace TicTacToe
             this.Hide();
 
         }
+        private void LAN_Click(object sender, EventArgs e)
+        {
+            Form LAN = new CreateOrJoinLan();
+            LAN.Show();
+            LAN.FormClosed += new FormClosedEventHandler(Game_FormClosed);
+            Hide();
+        }
+
+        //If player want to play again new windows is opend if not choose gamemode screen appears
         void Game_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (playAgain == true)
@@ -82,5 +94,6 @@ namespace TicTacToe
                 this.Show();
             }
         }
+
     }
 }

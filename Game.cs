@@ -78,6 +78,7 @@ namespace TicTacToe
         }
         private void computerAI()
         {
+            //Runs function for cheking if player won
             count++;
             if (CheckOnWin("X") && canRun){
                 canRun = false;
@@ -159,6 +160,7 @@ namespace TicTacToe
                     break;
 
             }
+            //Checks if player lost
             if (CheckOnLoose("O") && canRun)
             {
                 Program.wins_r++;
@@ -166,6 +168,7 @@ namespace TicTacToe
                 wins.Text = "Wins:\nPlayer: " + Program.wins_p + "\nRobot: " + Program.wins_r;
                 return;
             }
+            //When random generator genreates 100 number of slot which was full it will place O on first empty slot
             if (count == 100)
             {
                 count = 0;
@@ -218,6 +221,7 @@ namespace TicTacToe
         }
         private bool CheckOnFullGrid()
         {
+            //Check if the game is a tie
             if (place1.Text != "" && place2.Text != "" && place3.Text != "" && place4.Text != "" && place5.Text != "" && place6.Text != "" && place7.Text != "" && place8.Text != "" && place9.Text != "")
             {
                 GameOver.Text = "Tie!";
@@ -230,11 +234,13 @@ namespace TicTacToe
 
         private void PlayAgain_Click(object sender, EventArgs e)
         {
+            //Create a new game
             choose_gamemode.playAgain = true;
             this.Close();
         }
         private bool CheckOnWin(string player)
         {
+            //Checks if player won
             if (place7.Text == player && place8.Text == player && place9.Text == player)
             {
                 GameOver.Text = "Win!";

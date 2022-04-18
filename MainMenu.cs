@@ -29,6 +29,7 @@ namespace TicTacToe
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //App styles
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
             GameName.Left = (int)(this.Size.Width / 2.5F);
@@ -37,11 +38,13 @@ namespace TicTacToe
             Play.Top = (int)(this.Size.Height / 3.5f);
             Exit.Left = (int)(this.Size.Width / 2.325);
             Exit.Top = (int)(this.Size.Height / 2.75f);
+            string hostName = Dns.GetHostName();
 
         }
 
         private void Play_Click(object sender, EventArgs e)
         {
+            //Opens choose gamemode screen
             choose_gamemode gamemode = new choose_gamemode();
             gamemode.FormClosed += new FormClosedEventHandler(Game_FormClosed);
             gamemode.Show();

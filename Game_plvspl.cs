@@ -64,8 +64,10 @@ namespace TicTacToe
         }
         private void onGridClick(object sender, EventArgs e)
         {
+            //Check if slot is empty
             if((sender as Button).Text == "")
             {
+                //Depending of which players is round it will place symbol
                 if(Program.round == 0)
                 {
                     (sender as Button).Text = "X";
@@ -76,6 +78,7 @@ namespace TicTacToe
                     (sender as Button).Text = "O";
                     Program.round = 0;
                 }
+                //Checks for every player if won
                 if (CheckOnPlayerWin("X"))
                 {
                     Program.wins_p1++;
@@ -85,7 +88,9 @@ namespace TicTacToe
                 {
                     Program.wins_p2++;
                     wins.Text = "Wins:\nPlayer1[X]: " + Program.wins_p1 + "\nPlayer2[O]: " + Program.wins_p2;
-                }else if (checkOnFullGrid()){}
+                }
+                //Checks if it's a tie
+                else if (checkOnFullGrid()){}
             }
         }
         private bool CheckOnPlayerWin(string player)
@@ -207,6 +212,7 @@ namespace TicTacToe
 
         private void PlayAgain_Click(object sender, EventArgs e)
         {
+            //Creates a new game
             choose_gamemode.playAgainPl = true;
             this.Close();
         }
