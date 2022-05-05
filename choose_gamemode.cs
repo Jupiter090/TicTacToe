@@ -25,16 +25,7 @@ namespace TicTacToe
             //Fullsreen the window
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
-            PlvsPl.Left = (int)(this.Size.Width / 2.325);
-            PlvsPl.Top = (int)(this.Size.Height / 3.5f);
-            PlvsB.Left = (int)(this.Size.Width / 2.325);
-            PlvsB.Top = (int)(this.Size.Height / 2.75f);
-            LAN.Left = (int)(this.Size.Width / 2.325);
-            LAN.Top = (int)(this.Size.Height / 2.25);
-            GoBack.Left = (int)(this.Size.Width / 2.325);
-            GoBack.Top = (int)(this.Size.Height / 1.9);
-            Gamemode.Left = (int)(this.Size.Width / 2.95F);
-            Gamemode.Top = (int)(this.Size.Height / 5F);
+
         }
 
         private void GoBack_Click(object sender, EventArgs e)

@@ -39,6 +39,7 @@ namespace TicTacToe
             // 
             // PlvsB
             // 
+            this.PlvsB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PlvsB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.PlvsB.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.PlvsB.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -48,7 +49,7 @@ namespace TicTacToe
             this.PlvsB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlvsB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PlvsB.ForeColor = System.Drawing.Color.White;
-            this.PlvsB.Location = new System.Drawing.Point(274, 139);
+            this.PlvsB.Location = new System.Drawing.Point(270, 259);
             this.PlvsB.Name = "PlvsB";
             this.PlvsB.Size = new System.Drawing.Size(242, 58);
             this.PlvsB.TabIndex = 3;
@@ -59,6 +60,7 @@ namespace TicTacToe
             // 
             // PlvsPl
             // 
+            this.PlvsPl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PlvsPl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.PlvsPl.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.PlvsPl.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -68,7 +70,7 @@ namespace TicTacToe
             this.PlvsPl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlvsPl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PlvsPl.ForeColor = System.Drawing.Color.White;
-            this.PlvsPl.Location = new System.Drawing.Point(274, 203);
+            this.PlvsPl.Location = new System.Drawing.Point(270, 323);
             this.PlvsPl.Name = "PlvsPl";
             this.PlvsPl.Size = new System.Drawing.Size(242, 58);
             this.PlvsPl.TabIndex = 4;
@@ -79,6 +81,7 @@ namespace TicTacToe
             // 
             // GoBack
             // 
+            this.GoBack.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.GoBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.GoBack.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.GoBack.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -88,7 +91,7 @@ namespace TicTacToe
             this.GoBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GoBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.GoBack.ForeColor = System.Drawing.Color.White;
-            this.GoBack.Location = new System.Drawing.Point(274, 336);
+            this.GoBack.Location = new System.Drawing.Point(270, 456);
             this.GoBack.Name = "GoBack";
             this.GoBack.Size = new System.Drawing.Size(242, 58);
             this.GoBack.TabIndex = 5;
@@ -99,10 +102,11 @@ namespace TicTacToe
             // 
             // Gamemode
             // 
+            this.Gamemode.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Gamemode.AutoSize = true;
             this.Gamemode.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gamemode.ForeColor = System.Drawing.Color.Black;
-            this.Gamemode.Location = new System.Drawing.Point(105, 24);
+            this.Gamemode.Location = new System.Drawing.Point(101, 144);
             this.Gamemode.Name = "Gamemode";
             this.Gamemode.Size = new System.Drawing.Size(574, 81);
             this.Gamemode.TabIndex = 6;
@@ -111,6 +115,7 @@ namespace TicTacToe
             // 
             // LAN
             // 
+            this.LAN.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LAN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.LAN.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.LAN.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -120,7 +125,7 @@ namespace TicTacToe
             this.LAN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LAN.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.LAN.ForeColor = System.Drawing.Color.White;
-            this.LAN.Location = new System.Drawing.Point(274, 267);
+            this.LAN.Location = new System.Drawing.Point(270, 387);
             this.LAN.Name = "LAN";
             this.LAN.Size = new System.Drawing.Size(242, 58);
             this.LAN.TabIndex = 7;
@@ -134,7 +139,7 @@ namespace TicTacToe
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 795);
             this.Controls.Add(this.LAN);
             this.Controls.Add(this.Gamemode);
             this.Controls.Add(this.GoBack);

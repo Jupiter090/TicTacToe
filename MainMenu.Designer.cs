@@ -37,10 +37,12 @@ namespace TicTacToe
             // 
             // GameName
             // 
+            this.GameName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.GameName.AutoSize = true;
+            this.GameName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GameName.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GameName.ForeColor = System.Drawing.Color.Black;
-            this.GameName.Location = new System.Drawing.Point(86, 40);
+            this.GameName.Location = new System.Drawing.Point(114, 184);
             this.GameName.Name = "GameName";
             this.GameName.Size = new System.Drawing.Size(354, 81);
             this.GameName.TabIndex = 0;
@@ -49,6 +51,7 @@ namespace TicTacToe
             // 
             // Exit
             // 
+            this.Exit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.Exit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.Exit.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -58,7 +61,7 @@ namespace TicTacToe
             this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Exit.ForeColor = System.Drawing.Color.White;
-            this.Exit.Location = new System.Drawing.Point(139, 207);
+            this.Exit.Location = new System.Drawing.Point(162, 335);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(242, 58);
             this.Exit.TabIndex = 3;
@@ -69,6 +72,7 @@ namespace TicTacToe
             // 
             // Play
             // 
+            this.Play.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Play.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.Play.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.Play.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -78,7 +82,7 @@ namespace TicTacToe
             this.Play.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Play.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Play.ForeColor = System.Drawing.Color.White;
-            this.Play.Location = new System.Drawing.Point(139, 143);
+            this.Play.Location = new System.Drawing.Point(162, 271);
             this.Play.Name = "Play";
             this.Play.Size = new System.Drawing.Size(242, 58);
             this.Play.TabIndex = 2;
@@ -93,7 +97,7 @@ namespace TicTacToe
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1348, 718);
+            this.ClientSize = new System.Drawing.Size(588, 690);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.Play);
             this.Controls.Add(this.GameName);
@@ -108,10 +112,9 @@ namespace TicTacToe
         }
 
         #endregion
-
-        private System.Windows.Forms.Label GameName;
         private resources.customButtons Play;
         private resources.customButtons Exit;
+        private System.Windows.Forms.Label GameName;
     }
 }
 

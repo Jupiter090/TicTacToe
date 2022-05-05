@@ -47,9 +47,10 @@ namespace TicTacToe
             // 
             // GameOver
             // 
+            this.GameOver.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.GameOver.AutoSize = true;
             this.GameOver.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.GameOver.Location = new System.Drawing.Point(600, 154);
+            this.GameOver.Location = new System.Drawing.Point(482, 39);
             this.GameOver.Name = "GameOver";
             this.GameOver.Size = new System.Drawing.Size(139, 81);
             this.GameOver.TabIndex = 13;
@@ -67,6 +68,7 @@ namespace TicTacToe
             // 
             // PlayAgain
             // 
+            this.PlayAgain.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.PlayAgain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.PlayAgain.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.PlayAgain.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -76,7 +78,7 @@ namespace TicTacToe
             this.PlayAgain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlayAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PlayAgain.ForeColor = System.Drawing.Color.White;
-            this.PlayAgain.Location = new System.Drawing.Point(558, 383);
+            this.PlayAgain.Location = new System.Drawing.Point(439, 583);
             this.PlayAgain.Name = "PlayAgain";
             this.PlayAgain.Size = new System.Drawing.Size(230, 64);
             this.PlayAgain.TabIndex = 14;
@@ -87,6 +89,7 @@ namespace TicTacToe
             // 
             // place9
             // 
+            this.place9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.place9.BackColor = System.Drawing.Color.White;
             this.place9.BackgroundColor = System.Drawing.Color.White;
             this.place9.BorderColor = System.Drawing.Color.Black;
@@ -97,7 +100,7 @@ namespace TicTacToe
             this.place9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place9.Font = new System.Drawing.Font("Microsoft YaHei", 48F, System.Drawing.FontStyle.Bold);
             this.place9.ForeColor = System.Drawing.Color.Black;
-            this.place9.Location = new System.Drawing.Point(422, 23);
+            this.place9.Location = new System.Drawing.Point(612, 156);
             this.place9.Name = "place9";
             this.place9.Size = new System.Drawing.Size(125, 125);
             this.place9.TabIndex = 12;
@@ -108,6 +111,7 @@ namespace TicTacToe
             // 
             // place8
             // 
+            this.place8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.place8.BackColor = System.Drawing.Color.White;
             this.place8.BackgroundColor = System.Drawing.Color.White;
             this.place8.BorderColor = System.Drawing.Color.Black;
@@ -118,7 +122,7 @@ namespace TicTacToe
             this.place8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place8.Font = new System.Drawing.Font("Microsoft YaHei", 48F, System.Drawing.FontStyle.Bold);
             this.place8.ForeColor = System.Drawing.Color.Black;
-            this.place8.Location = new System.Drawing.Point(291, 23);
+            this.place8.Location = new System.Drawing.Point(481, 156);
             this.place8.Name = "place8";
             this.place8.Size = new System.Drawing.Size(125, 125);
             this.place8.TabIndex = 11;
@@ -129,6 +133,7 @@ namespace TicTacToe
             // 
             // place7
             // 
+            this.place7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.place7.BackColor = System.Drawing.Color.White;
             this.place7.BackgroundColor = System.Drawing.Color.White;
             this.place7.BorderColor = System.Drawing.Color.Black;
@@ -139,7 +144,7 @@ namespace TicTacToe
             this.place7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place7.Font = new System.Drawing.Font("Microsoft YaHei", 48F, System.Drawing.FontStyle.Bold);
             this.place7.ForeColor = System.Drawing.Color.Black;
-            this.place7.Location = new System.Drawing.Point(160, 23);
+            this.place7.Location = new System.Drawing.Point(350, 156);
             this.place7.Name = "place7";
             this.place7.Size = new System.Drawing.Size(125, 125);
             this.place7.TabIndex = 10;
@@ -150,6 +155,7 @@ namespace TicTacToe
             // 
             // place6
             // 
+            this.place6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.place6.BackColor = System.Drawing.Color.White;
             this.place6.BackgroundColor = System.Drawing.Color.White;
             this.place6.BorderColor = System.Drawing.Color.Black;
@@ -160,7 +166,7 @@ namespace TicTacToe
             this.place6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place6.Font = new System.Drawing.Font("Microsoft YaHei", 48F, System.Drawing.FontStyle.Bold);
             this.place6.ForeColor = System.Drawing.Color.Black;
-            this.place6.Location = new System.Drawing.Point(422, 154);
+            this.place6.Location = new System.Drawing.Point(612, 287);
             this.place6.Name = "place6";
             this.place6.Size = new System.Drawing.Size(125, 125);
             this.place6.TabIndex = 9;
@@ -171,6 +177,7 @@ namespace TicTacToe
             // 
             // place5
             // 
+            this.place5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.place5.BackColor = System.Drawing.Color.White;
             this.place5.BackgroundColor = System.Drawing.Color.White;
             this.place5.BorderColor = System.Drawing.Color.Black;
@@ -181,7 +188,7 @@ namespace TicTacToe
             this.place5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place5.Font = new System.Drawing.Font("Microsoft YaHei", 48F, System.Drawing.FontStyle.Bold);
             this.place5.ForeColor = System.Drawing.Color.Black;
-            this.place5.Location = new System.Drawing.Point(291, 154);
+            this.place5.Location = new System.Drawing.Point(481, 287);
             this.place5.Name = "place5";
             this.place5.Size = new System.Drawing.Size(125, 125);
             this.place5.TabIndex = 8;
@@ -192,6 +199,7 @@ namespace TicTacToe
             // 
             // place4
             // 
+            this.place4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.place4.BackColor = System.Drawing.Color.White;
             this.place4.BackgroundColor = System.Drawing.Color.White;
             this.place4.BorderColor = System.Drawing.Color.Black;
@@ -202,7 +210,7 @@ namespace TicTacToe
             this.place4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place4.Font = new System.Drawing.Font("Microsoft YaHei", 48F, System.Drawing.FontStyle.Bold);
             this.place4.ForeColor = System.Drawing.Color.Black;
-            this.place4.Location = new System.Drawing.Point(160, 154);
+            this.place4.Location = new System.Drawing.Point(350, 287);
             this.place4.Name = "place4";
             this.place4.Size = new System.Drawing.Size(125, 125);
             this.place4.TabIndex = 7;
@@ -213,6 +221,7 @@ namespace TicTacToe
             // 
             // place3
             // 
+            this.place3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.place3.BackColor = System.Drawing.Color.White;
             this.place3.BackgroundColor = System.Drawing.Color.White;
             this.place3.BorderColor = System.Drawing.Color.Black;
@@ -223,7 +232,7 @@ namespace TicTacToe
             this.place3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place3.Font = new System.Drawing.Font("Microsoft YaHei", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.place3.ForeColor = System.Drawing.Color.Black;
-            this.place3.Location = new System.Drawing.Point(422, 285);
+            this.place3.Location = new System.Drawing.Point(612, 418);
             this.place3.Name = "place3";
             this.place3.Size = new System.Drawing.Size(125, 125);
             this.place3.TabIndex = 6;
@@ -234,6 +243,7 @@ namespace TicTacToe
             // 
             // place2
             // 
+            this.place2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.place2.BackColor = System.Drawing.Color.White;
             this.place2.BackgroundColor = System.Drawing.Color.White;
             this.place2.BorderColor = System.Drawing.Color.Black;
@@ -244,7 +254,7 @@ namespace TicTacToe
             this.place2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place2.Font = new System.Drawing.Font("Microsoft YaHei", 48F, System.Drawing.FontStyle.Bold);
             this.place2.ForeColor = System.Drawing.Color.Black;
-            this.place2.Location = new System.Drawing.Point(291, 285);
+            this.place2.Location = new System.Drawing.Point(481, 418);
             this.place2.Name = "place2";
             this.place2.Size = new System.Drawing.Size(125, 125);
             this.place2.TabIndex = 5;
@@ -255,6 +265,7 @@ namespace TicTacToe
             // 
             // place1
             // 
+            this.place1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.place1.BackColor = System.Drawing.Color.White;
             this.place1.BackgroundColor = System.Drawing.Color.White;
             this.place1.BorderColor = System.Drawing.Color.Black;
@@ -265,7 +276,7 @@ namespace TicTacToe
             this.place1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place1.Font = new System.Drawing.Font("Microsoft YaHei", 48F, System.Drawing.FontStyle.Bold);
             this.place1.ForeColor = System.Drawing.Color.Black;
-            this.place1.Location = new System.Drawing.Point(160, 285);
+            this.place1.Location = new System.Drawing.Point(350, 418);
             this.place1.Name = "place1";
             this.place1.Size = new System.Drawing.Size(125, 125);
             this.place1.TabIndex = 4;
@@ -276,6 +287,7 @@ namespace TicTacToe
             // 
             // customButtons3
             // 
+            this.customButtons3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.customButtons3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.customButtons3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.customButtons3.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -285,7 +297,7 @@ namespace TicTacToe
             this.customButtons3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButtons3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.customButtons3.ForeColor = System.Drawing.Color.White;
-            this.customButtons3.Location = new System.Drawing.Point(291, 185);
+            this.customButtons3.Location = new System.Drawing.Point(439, 653);
             this.customButtons3.Name = "customButtons3";
             this.customButtons3.Size = new System.Drawing.Size(230, 64);
             this.customButtons3.TabIndex = 3;
@@ -299,7 +311,7 @@ namespace TicTacToe
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 459);
+            this.ClientSize = new System.Drawing.Size(1057, 726);
             this.Controls.Add(this.wins);
             this.Controls.Add(this.PlayAgain);
             this.Controls.Add(this.GameOver);

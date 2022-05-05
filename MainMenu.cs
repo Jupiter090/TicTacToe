@@ -32,12 +32,6 @@ namespace TicTacToe
             //App styles
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
-            GameName.Left = (int)(this.Size.Width / 2.5F);
-            GameName.Top = (int)(this.Size.Height / 5F);
-            Play.Left = (int)(this.Size.Width / 2.325);
-            Play.Top = (int)(this.Size.Height / 3.5f);
-            Exit.Left = (int)(this.Size.Width / 2.325);
-            Exit.Top = (int)(this.Size.Height / 2.75f);
             string hostName = Dns.GetHostName();
 
         }

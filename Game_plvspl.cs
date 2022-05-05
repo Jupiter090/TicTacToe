@@ -23,37 +23,10 @@ namespace TicTacToe
         {
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
-            customButtons3.Left = (int)(this.Size.Width / 1.15f);
-            customButtons3.Top = (int)(this.Size.Height / 1.1f);
-            //Sets buttons positon and centres grid
-            place1.Left = (int)(this.Size.Width / 2.35f);
-            place1.Top = (int)(this.Size.Height / 4f);
-            place2.Left = (int)(this.Size.Width / 2.05f);
-            place2.Top = (int)(this.Size.Height / 4f);
-            place3.Left = (int)(this.Size.Width / 1.8175f);
-            place3.Top = (int)(this.Size.Height / 4f);
-            place4.Left = (int)(this.Size.Width / 2.35f);
-            place4.Top = (int)(this.Size.Height / 2.70f);
-            place5.Left = (int)(this.Size.Width / 2.05f);
-            place5.Top = (int)(this.Size.Height / 2.70f);
-            place6.Left = (int)(this.Size.Width / 1.8175f);
-            place6.Top = (int)(this.Size.Height / 2.70f);
-            place7.Left = (int)(this.Size.Width / 2.35f);
-            place7.Top = (int)(this.Size.Height / 2.045f);
-            place8.Left = (int)(this.Size.Width / 2.05f);
-            place8.Top = (int)(this.Size.Height / 2.045f);
-            place9.Left = (int)(this.Size.Width / 1.8175f);
-            place9.Top = (int)(this.Size.Height / 2.045f);
             //Game over text
             GameOver.Text = null;
-            GameOver.Top = (int)(this.Size.Height / 17f);
-            GameOver.Left = (int)(this.Size.Width / 2.075f);
             GameOverWin.Text = null;
-            GameOverWin.Top = (int)(this.Size.Height / 17f);
-            GameOverWin.Left = (int)(this.Size.Width / 2.40f);
-            PlayAgain.Visible = false;
-            PlayAgain.Top = (int)(this.Size.Height / 7f);
-            PlayAgain.Left = (int)(this.Size.Width / 2.18f);
+            PlayAgain.Visible = false;;
             wins.Text = "Wins:\nPlayer1[X]: " + Program.wins_p1 + "\nPlayer2[O]: " + Program.wins_p2;
         }
 
@@ -215,6 +188,16 @@ namespace TicTacToe
             //Creates a new game
             choose_gamemode.playAgainPl = true;
             this.Close();
+        }
+
+        private void GameOver_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GameOverWin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
