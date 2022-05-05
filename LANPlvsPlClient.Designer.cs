@@ -43,7 +43,7 @@
             this.place2 = new TicTacToe.resources.customButtons();
             this.place1 = new TicTacToe.resources.customButtons();
             this.txtRound = new System.Windows.Forms.Label();
-            this.txtGameEnd = new System.Windows.Forms.Label();
+            this.txtGameEnd = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtInformation
@@ -85,14 +85,14 @@
             this.btnBack.Text = "Go back!";
             this.btnBack.TextdColor = System.Drawing.Color.White;
             this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // Starting
             // 
             this.Starting.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Starting.AutoSize = true;
             this.Starting.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Starting.Location = new System.Drawing.Point(313, 309);
+            this.Starting.Location = new System.Drawing.Point(315, 354);
             this.Starting.Name = "Starting";
             this.Starting.Size = new System.Drawing.Size(0, 45);
             this.Starting.TabIndex = 6;
@@ -110,7 +110,7 @@
             this.place9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place9.Font = new System.Drawing.Font("Microsoft YaHei", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.place9.ForeColor = System.Drawing.Color.Black;
-            this.place9.Location = new System.Drawing.Point(477, 223);
+            this.place9.Location = new System.Drawing.Point(479, 268);
             this.place9.Name = "place9";
             this.place9.Size = new System.Drawing.Size(83, 80);
             this.place9.TabIndex = 40;
@@ -133,7 +133,7 @@
             this.place8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place8.Font = new System.Drawing.Font("Microsoft YaHei", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.place8.ForeColor = System.Drawing.Color.Black;
-            this.place8.Location = new System.Drawing.Point(388, 223);
+            this.place8.Location = new System.Drawing.Point(390, 268);
             this.place8.Name = "place8";
             this.place8.Size = new System.Drawing.Size(83, 80);
             this.place8.TabIndex = 39;
@@ -156,7 +156,7 @@
             this.place7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place7.Font = new System.Drawing.Font("Microsoft YaHei", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.place7.ForeColor = System.Drawing.Color.Black;
-            this.place7.Location = new System.Drawing.Point(299, 223);
+            this.place7.Location = new System.Drawing.Point(301, 268);
             this.place7.Name = "place7";
             this.place7.Size = new System.Drawing.Size(83, 80);
             this.place7.TabIndex = 38;
@@ -179,7 +179,7 @@
             this.place6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place6.Font = new System.Drawing.Font("Microsoft YaHei", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.place6.ForeColor = System.Drawing.Color.Black;
-            this.place6.Location = new System.Drawing.Point(477, 137);
+            this.place6.Location = new System.Drawing.Point(479, 182);
             this.place6.Name = "place6";
             this.place6.Size = new System.Drawing.Size(83, 80);
             this.place6.TabIndex = 37;
@@ -202,7 +202,7 @@
             this.place5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place5.Font = new System.Drawing.Font("Microsoft YaHei", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.place5.ForeColor = System.Drawing.Color.Black;
-            this.place5.Location = new System.Drawing.Point(388, 137);
+            this.place5.Location = new System.Drawing.Point(390, 182);
             this.place5.Name = "place5";
             this.place5.Size = new System.Drawing.Size(83, 80);
             this.place5.TabIndex = 36;
@@ -225,7 +225,7 @@
             this.place4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place4.Font = new System.Drawing.Font("Microsoft YaHei", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.place4.ForeColor = System.Drawing.Color.Black;
-            this.place4.Location = new System.Drawing.Point(299, 137);
+            this.place4.Location = new System.Drawing.Point(301, 182);
             this.place4.Name = "place4";
             this.place4.Size = new System.Drawing.Size(83, 80);
             this.place4.TabIndex = 35;
@@ -248,7 +248,7 @@
             this.place3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place3.Font = new System.Drawing.Font("Microsoft YaHei", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.place3.ForeColor = System.Drawing.Color.Black;
-            this.place3.Location = new System.Drawing.Point(477, 51);
+            this.place3.Location = new System.Drawing.Point(479, 96);
             this.place3.Name = "place3";
             this.place3.Size = new System.Drawing.Size(83, 80);
             this.place3.TabIndex = 34;
@@ -271,7 +271,7 @@
             this.place2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place2.Font = new System.Drawing.Font("Microsoft YaHei", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.place2.ForeColor = System.Drawing.Color.Black;
-            this.place2.Location = new System.Drawing.Point(388, 51);
+            this.place2.Location = new System.Drawing.Point(390, 96);
             this.place2.Name = "place2";
             this.place2.Size = new System.Drawing.Size(83, 80);
             this.place2.TabIndex = 33;
@@ -294,7 +294,7 @@
             this.place1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place1.Font = new System.Drawing.Font("Microsoft YaHei", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.place1.ForeColor = System.Drawing.Color.Black;
-            this.place1.Location = new System.Drawing.Point(299, 51);
+            this.place1.Location = new System.Drawing.Point(301, 96);
             this.place1.Name = "place1";
             this.place1.Size = new System.Drawing.Size(83, 80);
             this.place1.TabIndex = 32;
@@ -317,18 +317,26 @@
             // 
             // txtGameEnd
             // 
-            this.txtGameEnd.AutoSize = true;
-            this.txtGameEnd.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtGameEnd.Location = new System.Drawing.Point(313, 3);
+            this.txtGameEnd.BackColor = System.Drawing.Color.White;
+            this.txtGameEnd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGameEnd.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtGameEnd.Font = new System.Drawing.Font("Segoe UI Semibold", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtGameEnd.ForeColor = System.Drawing.Color.Black;
+            this.txtGameEnd.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.txtGameEnd.Location = new System.Drawing.Point(301, 40);
             this.txtGameEnd.Name = "txtGameEnd";
-            this.txtGameEnd.Size = new System.Drawing.Size(0, 45);
-            this.txtGameEnd.TabIndex = 42;
-            this.txtGameEnd.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.txtGameEnd.ReadOnly = true;
+            this.txtGameEnd.Size = new System.Drawing.Size(261, 50);
+            this.txtGameEnd.TabIndex = 43;
+            this.txtGameEnd.TabStop = false;
+            this.txtGameEnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGameEnd.Enter += new System.EventHandler(this.TxtGameEnd_Enter);
             // 
             // LANPlvsPlClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtGameEnd);
             this.Controls.Add(this.txtRound);
@@ -371,6 +379,6 @@
         private resources.customButtons place2;
         private resources.customButtons place1;
         private System.Windows.Forms.Label txtRound;
-        private System.Windows.Forms.Label txtGameEnd;
+        private System.Windows.Forms.TextBox txtGameEnd;
     }
 }

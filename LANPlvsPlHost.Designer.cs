@@ -33,7 +33,6 @@
             this.txtInformation = new System.Windows.Forms.Label();
             this.Starting = new System.Windows.Forms.Label();
             this.txtRound = new System.Windows.Forms.Label();
-            this.txtGameEnd = new System.Windows.Forms.Label();
             this.btnPlayAgain = new TicTacToe.resources.customButtons();
             this.place9 = new TicTacToe.resources.customButtons();
             this.place8 = new TicTacToe.resources.customButtons();
@@ -46,6 +45,7 @@
             this.place1 = new TicTacToe.resources.customButtons();
             this.Start = new TicTacToe.resources.customButtons();
             this.btnBack = new TicTacToe.resources.customButtons();
+            this.txtGameEnd = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtPlr
@@ -89,16 +89,6 @@
             this.txtRound.Text = "Round: X";
             this.txtRound.Visible = false;
             // 
-            // txtGameEnd
-            // 
-            this.txtGameEnd.AutoSize = true;
-            this.txtGameEnd.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtGameEnd.Location = new System.Drawing.Point(324, 9);
-            this.txtGameEnd.Name = "txtGameEnd";
-            this.txtGameEnd.Size = new System.Drawing.Size(0, 45);
-            this.txtGameEnd.TabIndex = 33;
-            this.txtGameEnd.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // btnPlayAgain
             // 
             this.btnPlayAgain.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -111,7 +101,7 @@
             this.btnPlayAgain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlayAgain.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnPlayAgain.ForeColor = System.Drawing.Color.White;
-            this.btnPlayAgain.Location = new System.Drawing.Point(538, 121);
+            this.btnPlayAgain.Location = new System.Drawing.Point(282, 332);
             this.btnPlayAgain.Name = "btnPlayAgain";
             this.btnPlayAgain.Size = new System.Drawing.Size(238, 50);
             this.btnPlayAgain.TabIndex = 34;
@@ -119,7 +109,7 @@
             this.btnPlayAgain.TextdColor = System.Drawing.Color.White;
             this.btnPlayAgain.UseVisualStyleBackColor = false;
             this.btnPlayAgain.Visible = false;
-            this.btnPlayAgain.Click += new System.EventHandler(this.btnPlayAgain_Click);
+            this.btnPlayAgain.Click += new System.EventHandler(this.BtnPlayAgain_Click);
             // 
             // place9
             // 
@@ -370,13 +360,31 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // txtGameEnd
+            // 
+            this.txtGameEnd.BackColor = System.Drawing.Color.White;
+            this.txtGameEnd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGameEnd.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtGameEnd.Font = new System.Drawing.Font("Segoe UI Semibold", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtGameEnd.ForeColor = System.Drawing.Color.Black;
+            this.txtGameEnd.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.txtGameEnd.Location = new System.Drawing.Point(271, 4);
+            this.txtGameEnd.Name = "txtGameEnd";
+            this.txtGameEnd.ReadOnly = true;
+            this.txtGameEnd.Size = new System.Drawing.Size(261, 50);
+            this.txtGameEnd.TabIndex = 35;
+            this.txtGameEnd.TabStop = false;
+            this.txtGameEnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGameEnd.Enter += new System.EventHandler(this.TxtGameEnd_Enter);
+            // 
             // LANPlvsPlHost
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnPlayAgain);
             this.Controls.Add(this.txtGameEnd);
+            this.Controls.Add(this.btnPlayAgain);
             this.Controls.Add(this.txtRound);
             this.Controls.Add(this.place9);
             this.Controls.Add(this.place8);
@@ -419,7 +427,7 @@
         private resources.customButtons place8;
         private resources.customButtons place9;
         private System.Windows.Forms.Label txtRound;
-        private System.Windows.Forms.Label txtGameEnd;
         private resources.customButtons btnPlayAgain;
+        private System.Windows.Forms.TextBox txtGameEnd;
     }
 }

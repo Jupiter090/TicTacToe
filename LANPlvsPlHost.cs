@@ -20,6 +20,8 @@ namespace TicTacToe
         //Sets whos roud is
         public static string round = "X";
 
+        private static bool isPlaying = true;
+
         public LANPlvsPlHost()
         {
             InitializeComponent();
@@ -158,6 +160,7 @@ namespace TicTacToe
             if(place1.Text != "" && place2.Text != "" && place3.Text != "" && place4.Text != "" && place5.Text != "" && place6.Text != "" && place7.Text != "" && place8.Text != "" && place9.Text != "")
             {
                 server.BroadcastLine("tie");
+                isPlaying = false;
                 txtGameEnd.Text = "Tie!";
                 btnPlayAgain.Visible = true;
                 txtRound.Visible = false;
@@ -170,7 +173,7 @@ namespace TicTacToe
         {
             Button click = sender as Button;
             //Will put mark on grid and change the round
-            if (round == "X" && click.Text == "") {
+            if (round == "X" && click.Text == "" && isPlaying == true) {
                 
                 server.BroadcastLine(click.Name);
                 click.Text = round;
@@ -178,13 +181,27 @@ namespace TicTacToe
                 txtRound.Text = "Round: " + round;
                 OnFullGrid();
             }
-            
+            CheckOnPlayer1Win();
+
         }
 
-        private void btnPlayAgain_Click(object sender, EventArgs e)
+        private void CheckOnPlayer1Win()
+        {
+            if(place1.Text == "X" && place2.Text == "X" && place3.Text == "X")
+            {
+                txtGameEnd.Text = "Player1 WIN!";
+                server.BroadcastLine("p1win");
+                btnPlayAgain.Visible = true;
+                isPlaying = false;
+                txtRound.Visible = false;
+            }
+        }
+
+        private void BtnPlayAgain_Click(object sender, EventArgs e)
         {
             txtGameEnd.Text = null;
             btnPlayAgain.Visible = false;
+            isPlaying = true;
             //When play again button is clicked it will reset the game
             Button[] btns = { place1, place2, place3, place4, place5, place6, place7, place8, place9 };
             foreach (Button btn in btns)
@@ -193,6 +210,11 @@ namespace TicTacToe
             }
             txtRound.Visible = true;
             server.BroadcastLine("again");
+        }
+
+        private void TxtGameEnd_Enter(object sender, EventArgs e)
+        {
+            place1.Focus();
         }
     }
 }

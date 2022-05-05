@@ -23,6 +23,8 @@ namespace TicTacToe
 
         public string round = "X";
 
+        private static bool isPlaying = true;
+
         private void LANPlvsPlClient_Load(object sender, EventArgs e)
         {
             //Creates new client and tries to join server
@@ -47,6 +49,21 @@ namespace TicTacToe
         {
             txtPlr.Invoke((MethodInvoker)delegate ()
             {
+                //When game end a tie
+                if (e.MessageString.Remove(e.MessageString.Length - 1).Contains("tie"))
+                {
+                    txtGameEnd.Text = "Tie!";
+                    txtRound.Visible = false;
+                    isPlaying = false;
+                    Button[] btns = { place1, place2, place3, place4, place5, place6, place7, place8, place9 };
+                    foreach (Button btn in btns)
+                    {
+                        if (btn.Text == "")
+                        {
+                            btn.Text = "X";
+                        }
+                    }
+                }
                 //When the host started game grid will become visible
                 if (e.MessageString.Remove(e.MessageString.Length - 1) == "start")
                 {
@@ -59,6 +76,7 @@ namespace TicTacToe
                     txtPlr.Visible = false;
                     txtRound.Visible = true;
                     txtRound.Text = "Round: " + round;
+                    return;
                 }
                 //When host leaves it will close client and display an error message
                 if (e.MessageString.Remove(e.MessageString.Length - 1) == "stop")
@@ -66,6 +84,7 @@ namespace TicTacToe
                     client.Disconnect();
                     CreateOrJoinLan.close = "host disconnected";
                     Close();
+                    return;
                 }
                 //When host played his round it will update at client
                 if (e.MessageString.Remove(e.MessageString.Length - 1).Contains("place"))
@@ -102,25 +121,14 @@ namespace TicTacToe
                             break;
                     }
                     txtRound.Text = "Round: " + round;
+                    return;
                 }
-                //When game end a tie
-                if (e.MessageString.Remove(e.MessageString.Length - 1).Contains("tie"))
-                {
-                    txtGameEnd.Text = "Tie!";
-                    txtRound.Visible = false;
-                    Button[] btns = { place1, place2, place3, place4, place5, place6, place7, place8, place9 };
-                    foreach (Button btn in btns)
-                    {
-                        if (btn.Text == "") 
-                        {
-                            btn.Text = "X";
-                        }
-                    }
-                }
+                
                 //When host click play again button
                 if (e.MessageString.Remove(e.MessageString.Length - 1) == "again")
                 {
                     txtGameEnd.Text = null;
+                    isPlaying = true;
                     //When play again button is clicked it will reset the game
                     Button[] btns = { place1, place2, place3, place4, place5, place6, place7, place8, place9 };
                     foreach (Button btn in btns)
@@ -128,17 +136,23 @@ namespace TicTacToe
                         btn.Text = null;
                     }
                     txtRound.Visible = true;
-
+                    return;
+                }
+                if (e.MessageString.Remove(e.MessageString.Length - 1) == "p1win")
+                {
+                    txtGameEnd.Text = "Player1 WIN!";
+                    isPlaying = false;
+                    txtRound.Visible = false;
+                    return;
                 }
             });
         }
 
         private void OnGridClick(object sender, EventArgs e)
         {
-            if (onFullGrid()) return;
             Button click = sender as Button;
             //Will put mark on grid and change the round
-            if (round == "O" && click.Text == "")
+            if (round == "O" && click.Text == "" && isPlaying == true)
             {
                
                 client.WriteLine(click.Name);
@@ -147,18 +161,7 @@ namespace TicTacToe
                 txtRound.Text = "Round: " + round;
             }
         }
-        private bool onFullGrid()
-        {
-            //Checks if grid is full
-            if (place1.Text != "" && place2.Text != "" && place3.Text != "" && place4.Text != "" && place5.Text != "" && place6.Text != "" && place7.Text != "" && place8.Text != "" && place9.Text != "")
-            {
-                txtGameEnd.Text = "Tie!";
-                return true;
-            }
-            return false;
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
+        private void BtnBack_Click(object sender, EventArgs e)
         {
             //It will close the window
             try
@@ -185,6 +188,11 @@ namespace TicTacToe
             {
 
             }
+        }
+
+        private void TxtGameEnd_Enter(object sender, EventArgs e)
+        {
+            place1.Focus();
         }
     }
 }
