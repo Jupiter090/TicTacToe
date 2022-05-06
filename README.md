@@ -1,7 +1,7 @@
 # Tic-Tac-Toe
 
-## How to install (**Working only for Windows**)?
-You just download `setup.msi` from releases file and run it with admin premission and then complete the setup.
+## How to install?
+You just download `setup.msi` from releases file and run it with admin premission and then complete the setup. **Working only for Windows**
 
 ## Decsription of game
 This game has 3 gamemodes which you can choose.
