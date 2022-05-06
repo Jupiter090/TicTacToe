@@ -22,6 +22,9 @@ namespace TicTacToe
 
         private static bool isPlaying = true;
 
+        private static int point_p1 = 0;
+        private static int point_p2 = 0;
+
         public LANPlvsPlHost()
         {
             InitializeComponent();
@@ -41,6 +44,8 @@ namespace TicTacToe
 
         private void LANPlvsPlHost_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
             //Creates new server
             Start.Visible = false;
             server = new SimpleTcpServer();
@@ -89,6 +94,10 @@ namespace TicTacToe
                     round = "X";
                     txtRound.Visible = false;
                     isPlaying = true;
+                    points.Visible = false;
+                    point_p1 = 0;
+                    point_p2 = 0;
+                    points.Text = "Points: \n" + "Player1[X]: 0 \n Player2[O]: 0"; 
                 }
 
                 //When client played his round it will update at host
@@ -154,6 +163,7 @@ namespace TicTacToe
             txtPlr.Visible = false;
             txtRound.Visible = true;
             txtRound.Text = "Round: " + round;
+            points.Visible = true;
         }
 
         private bool OnFullGrid()
@@ -178,49 +188,65 @@ namespace TicTacToe
                 txtGameEnd.Text = "Player2 WIN!";
                 isPlaying = false;
                 txtRound.Visible = false;
+                btnPlayAgain.Visible = true;
             }
-            if (place4.Text == "O" && place5.Text == "O" && place6.Text == "O")
+            else if (place4.Text == "O" && place5.Text == "O" && place6.Text == "O")
             {
                 txtGameEnd.Text = "Player2 WIN!";
                 isPlaying = false;
                 txtRound.Visible = false;
+                btnPlayAgain.Visible = true;
             }
-            if (place7.Text == "O" && place8.Text == "O" && place9.Text == "O")
+            else if (place7.Text == "O" && place8.Text == "O" && place9.Text == "O")
             {
                 txtGameEnd.Text = "Player2 WIN!";
                 isPlaying = false;
                 txtRound.Visible = false;
+                btnPlayAgain.Visible = true;
             }
-            if (place1.Text == "O" && place4.Text == "O" && place7.Text == "O")
+            else if (place1.Text == "O" && place4.Text == "O" && place7.Text == "O")
             {
                 txtGameEnd.Text = "Player2 WIN!";
                 isPlaying = false;
                 txtRound.Visible = false;
+                btnPlayAgain.Visible = true;
             }
-            if (place2.Text == "O" && place5.Text == "O" && place8.Text == "O")
+            else if (place2.Text == "O" && place5.Text == "O" && place8.Text == "O")
             {
                 txtGameEnd.Text = "Player2 WIN!";
                 isPlaying = false;
                 txtRound.Visible = false;
+                btnPlayAgain.Visible = true;
             }
-            if (place3.Text == "O" && place6.Text == "O" && place9.Text == "O")
+            else if (place3.Text == "O" && place6.Text == "O" && place9.Text == "O")
             {
                 txtGameEnd.Text = "Player2 WIN!";
                 isPlaying = false;
                 txtRound.Visible = false;
+                btnPlayAgain.Visible = true;
             }
-            if (place1.Text == "O" && place5.Text == "O" && place9.Text == "O")
+            else if (place1.Text == "O" && place5.Text == "O" && place9.Text == "O")
             {
                 txtGameEnd.Text = "Player2 WIN!";
                 isPlaying = false;
                 txtRound.Visible = false;
+                btnPlayAgain.Visible = true;
             }
-            if (place3.Text == "O" && place5.Text == "O" && place7.Text == "O")
+            else if (place3.Text == "O" && place5.Text == "O" && place7.Text == "O")
             {
                 txtGameEnd.Text = "Player2 WIN!";
                 isPlaying = false;
                 txtRound.Visible = false;
+                btnPlayAgain.Visible = true;
             }
+            else
+            {
+                return;
+            }
+            point_p2++;
+            points.Text = "Points: \n" + 
+                          "Player1[X]: " + point_p1 + "\n" + 
+                          "Player2[O]: " + point_p2;
         }
 
         private void OnGridClick(object sender, EventArgs e)
@@ -249,55 +275,63 @@ namespace TicTacToe
                 isPlaying = false;
                 txtRound.Visible = false;
             }
-            if (place4.Text == "X" && place5.Text == "X" && place6.Text == "X")
+            else if (place4.Text == "X" && place5.Text == "X" && place6.Text == "X")
             { //Checks if host win in any scenario
                 txtGameEnd.Text = "Player1 WIN!";
                 btnPlayAgain.Visible = true;
                 isPlaying = false;
                 txtRound.Visible = false;
             }
-            if (place7.Text == "X" && place8.Text == "X" && place9.Text == "X")
+            else if (place7.Text == "X" && place8.Text == "X" && place9.Text == "X")
             { //Checks if host win in any scenario
                 txtGameEnd.Text = "Player1 WIN!";
                 btnPlayAgain.Visible = true;
                 isPlaying = false;
                 txtRound.Visible = false;
             }
-            if (place1.Text == "X" && place4.Text == "X" && place7.Text == "X")
+            else if (place1.Text == "X" && place4.Text == "X" && place7.Text == "X")
             { //Checks if host win in any scenario
                 txtGameEnd.Text = "Player1 WIN!";
                 btnPlayAgain.Visible = true;
                 isPlaying = false;
                 txtRound.Visible = false;
             }
-            if (place2.Text == "X" && place5.Text == "X" && place8.Text == "X")
+            else if (place2.Text == "X" && place5.Text == "X" && place8.Text == "X")
             { //Checks if host win in any scenario
                 txtGameEnd.Text = "Player1 WIN!";
                 btnPlayAgain.Visible = true;
                 isPlaying = false;
                 txtRound.Visible = false;
             }
-            if (place3.Text == "X" && place6.Text == "X" && place9.Text == "X")
+            else if (place3.Text == "X" && place6.Text == "X" && place9.Text == "X")
             { //Checks if host win in any scenario
                 txtGameEnd.Text = "Player1 WIN!";
                 btnPlayAgain.Visible = true;
                 isPlaying = false;
                 txtRound.Visible = false;
             }
-            if (place1.Text == "X" && place5.Text == "X" && place9.Text == "X")
+            else if (place1.Text == "X" && place5.Text == "X" && place9.Text == "X")
             { //Checks if host win in any scenario
                 txtGameEnd.Text = "Player1 WIN!";
                 btnPlayAgain.Visible = true;
                 isPlaying = false;
                 txtRound.Visible = false;
             }
-            if (place3.Text == "X" && place5.Text == "X" && place7.Text == "X")
+            else if (place3.Text == "X" && place5.Text == "X" && place7.Text == "X")
             { //Checks if host win in any scenario
                 txtGameEnd.Text = "Player1 WIN!";
                 btnPlayAgain.Visible = true;
                 isPlaying = false;
                 txtRound.Visible = false;
             }
+            else
+            {
+                return;
+            }
+            point_p1++;
+            points.Text = "Points: \n" +
+                          "Player1[X]: " + point_p1 + "\n" +
+                          "Player2[O]: " + point_p2;
 
         }
 
@@ -319,6 +353,11 @@ namespace TicTacToe
         private void TxtGameEnd_Enter(object sender, EventArgs e)
         {
             place1.Focus();
+        }
+
+        private void txtRound_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
