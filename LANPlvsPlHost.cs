@@ -72,7 +72,7 @@ namespace TicTacToe
                     txtPlr.Text = "Players: 2/2";
                     Start.Visible = true;
                 }
-                //When player leaves it will disallow to start the game
+                //When player leaves it will disallow to start the game or stop the game
                 if(e.MessageString.Remove(e.MessageString.Length - 1) == "1")
                 {
                     txtPlr.Text = "Players: 1/2";
@@ -88,9 +88,10 @@ namespace TicTacToe
                     }
                     round = "X";
                     txtRound.Visible = false;
+                    isPlaying = true;
                 }
 
-                //When client played his round it will update at client
+                //When client played his round it will update at host
                 if (e.MessageString.Remove(e.MessageString.Length - 1).Contains("place"))
                 {
                     round = "X";
@@ -125,6 +126,7 @@ namespace TicTacToe
                             break;
                     }
                     txtRound.Text = "Round: " + round;
+                    CheckOnClientWin();
                     OnFullGrid();
                 }
             });
@@ -168,6 +170,58 @@ namespace TicTacToe
             }
             return false;
         }
+        private void CheckOnClientWin()
+        {
+            //Checks if client win in any scenario
+            if (place1.Text == "O" && place2.Text == "O" && place3.Text == "O")
+            {
+                txtGameEnd.Text = "Player2 WIN!";
+                isPlaying = false;
+                txtRound.Visible = false;
+            }
+            if (place4.Text == "O" && place5.Text == "O" && place6.Text == "O")
+            {
+                txtGameEnd.Text = "Player2 WIN!";
+                isPlaying = false;
+                txtRound.Visible = false;
+            }
+            if (place7.Text == "O" && place8.Text == "O" && place9.Text == "O")
+            {
+                txtGameEnd.Text = "Player2 WIN!";
+                isPlaying = false;
+                txtRound.Visible = false;
+            }
+            if (place1.Text == "O" && place4.Text == "O" && place7.Text == "O")
+            {
+                txtGameEnd.Text = "Player2 WIN!";
+                isPlaying = false;
+                txtRound.Visible = false;
+            }
+            if (place2.Text == "O" && place5.Text == "O" && place8.Text == "O")
+            {
+                txtGameEnd.Text = "Player2 WIN!";
+                isPlaying = false;
+                txtRound.Visible = false;
+            }
+            if (place3.Text == "O" && place6.Text == "O" && place9.Text == "O")
+            {
+                txtGameEnd.Text = "Player2 WIN!";
+                isPlaying = false;
+                txtRound.Visible = false;
+            }
+            if (place1.Text == "O" && place5.Text == "O" && place9.Text == "O")
+            {
+                txtGameEnd.Text = "Player2 WIN!";
+                isPlaying = false;
+                txtRound.Visible = false;
+            }
+            if (place3.Text == "O" && place5.Text == "O" && place7.Text == "O")
+            {
+                txtGameEnd.Text = "Player2 WIN!";
+                isPlaying = false;
+                txtRound.Visible = false;
+            }
+        }
 
         private void OnGridClick(object sender, EventArgs e)
         {
@@ -188,13 +242,63 @@ namespace TicTacToe
         private void CheckOnPlayer1Win()
         {
             if(place1.Text == "X" && place2.Text == "X" && place3.Text == "X")
-            {
+            {  
+                //Checks if host win in any scenario
                 txtGameEnd.Text = "Player1 WIN!";
-                server.BroadcastLine("p1win");
                 btnPlayAgain.Visible = true;
                 isPlaying = false;
                 txtRound.Visible = false;
             }
+            if (place4.Text == "X" && place5.Text == "X" && place6.Text == "X")
+            { //Checks if host win in any scenario
+                txtGameEnd.Text = "Player1 WIN!";
+                btnPlayAgain.Visible = true;
+                isPlaying = false;
+                txtRound.Visible = false;
+            }
+            if (place7.Text == "X" && place8.Text == "X" && place9.Text == "X")
+            { //Checks if host win in any scenario
+                txtGameEnd.Text = "Player1 WIN!";
+                btnPlayAgain.Visible = true;
+                isPlaying = false;
+                txtRound.Visible = false;
+            }
+            if (place1.Text == "X" && place4.Text == "X" && place7.Text == "X")
+            { //Checks if host win in any scenario
+                txtGameEnd.Text = "Player1 WIN!";
+                btnPlayAgain.Visible = true;
+                isPlaying = false;
+                txtRound.Visible = false;
+            }
+            if (place2.Text == "X" && place5.Text == "X" && place8.Text == "X")
+            { //Checks if host win in any scenario
+                txtGameEnd.Text = "Player1 WIN!";
+                btnPlayAgain.Visible = true;
+                isPlaying = false;
+                txtRound.Visible = false;
+            }
+            if (place3.Text == "X" && place6.Text == "X" && place9.Text == "X")
+            { //Checks if host win in any scenario
+                txtGameEnd.Text = "Player1 WIN!";
+                btnPlayAgain.Visible = true;
+                isPlaying = false;
+                txtRound.Visible = false;
+            }
+            if (place1.Text == "X" && place5.Text == "X" && place9.Text == "X")
+            { //Checks if host win in any scenario
+                txtGameEnd.Text = "Player1 WIN!";
+                btnPlayAgain.Visible = true;
+                isPlaying = false;
+                txtRound.Visible = false;
+            }
+            if (place3.Text == "X" && place5.Text == "X" && place7.Text == "X")
+            { //Checks if host win in any scenario
+                txtGameEnd.Text = "Player1 WIN!";
+                btnPlayAgain.Visible = true;
+                isPlaying = false;
+                txtRound.Visible = false;
+            }
+
         }
 
         private void BtnPlayAgain_Click(object sender, EventArgs e)
