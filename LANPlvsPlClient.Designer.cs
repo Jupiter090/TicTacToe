@@ -336,7 +336,7 @@
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(440, 682);
+            this.btnBack.Location = new System.Drawing.Point(437, 639);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(277, 49);
             this.btnBack.TabIndex = 5;
